@@ -1,0 +1,1 @@
+rivets.configure({templateDelimiters:['{{','}}']});

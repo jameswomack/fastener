@@ -1,0 +1,20 @@
+{
+  "name": "jwwebb",
+  "version": "0.0.0",
+  "authors": [
+    "jameswomack <james@nblgstr.com>"
+  ],
+  "license": "MIT",
+  "homepage": "nblgstr.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rivets": "~0.6.6"
+  }
+}

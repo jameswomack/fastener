@@ -16,6 +16,8 @@
     "nodemon": "~1.0.14",
     "underscore": "~1.5.2",
     "rivets": "git://github.com/jameswomack/rivets#16949da264a8362cc7ad88ece41d9da54140e082",
-    "rivets-server": "git://github.com/jameswomack/rivets-server.git"
+    "rivets-server": "git://github.com/jameswomack/rivets-server.git",
+    "browserify-middleware": "~2.3.0",
+    "when": "~2.8.0"
   }
 }

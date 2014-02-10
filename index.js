@@ -6,33 +6,33 @@ var FastenerViewEngine = require('./lib/fastenerViewEngine');
 var app = express();
 var port = packageReader.get('port');
 
-// Initialize a BowerStatic instance, passing
-// `assets` as a the folder within which to
-// look for bower_components (or whatever is
-// passed as `componentsFolderName` via `options`
-//new BowerStatic(app, {
-  //containerFolderName: 'assets'
-//});
+// Load npmStatic.json as a sort of
+// require config for serving JS
+// files from node_modules
+require('./lib/npmStatic')(app);
 
-var nodeModulesOptions = {
-  componentsFolderName: 'node_modules',
-  containerURLPath: '/js',
-  overrideMappingsFile: true
-};
+// Load browserifyStatic.json as a sort of
+// require config for serving node JS
+// files from node_modules
+require('./lib/browserifyStatic')(app);
 
-var nodeStatic = new BowerStatic(app, nodeModulesOptions);
-nodeStatic.addMapping('rivets.js', 'rivets/dist/rivets.min.js');
+// Load bowerStatic.json as a sort of
+// require config for serving JS
+// files from bower_components, which is
+// within assets
+new BowerStatic(app, {
+  containerFolderName: 'assets'
+});
 
 app.set('views', process.cwd() + '/public');
 app.engine('html', FastenerViewEngine.__express);
-//app.use(Fastener);
 
 app.get('/:fileName.html', function(req, res){
   var rivetsModel = {
+    serviceOfferings: [{title:'A'},{title:'B'},{title:'C'}],
     title: 'J.W. Webb, Inc.',
     subTitle: 'Rocking you like a hurrica-ine!'
   };
-  console.log(req.params);
   res.render(req.params.fileName.concat('.html'), rivetsModel);
 });
 

@@ -1,0 +1,66 @@
+{
+  // Allow "missing" semicolons
+  "asi": true,
+
+  "predef": { "requirejs": true, "require": true },
+
+  // Define globals exposed by modern browsers.
+  "browser": true,
+
+  // Force all variable names to use either camelCase style or UPPER_CASE
+  // with underscores.
+  "camelcase": true,
+
+  // Requires you to always put curly braces around blocks in
+  // loops and conditionals
+  "curly": true,
+
+  // This options prohibits the use of == and != in favor of === and !==
+  "eqeqeq": true,
+
+  // Suppress warnings about == null comparisons.
+  "eqnull": true,
+
+  // Prohibit the use of immediate function invocations without
+  // wrapping them in parentheses
+  "immed": true,
+
+  // Require 2 spaces instead of tabs
+  "indent": 2,
+
+  // Define jQuery globals
+  "jquery": true,
+
+  // Prohibit use of a variable before it is defined.
+  "latedef": true,
+
+  // Limit the depth of blocks.
+  // Break up your functions!
+  "maxdepth": 3,
+
+  // Limit the amount of params per function.
+  // Use an options object instead of > 3 params.
+  "maxparams": 3,
+
+  // Limit the number of statements per function.
+  // Break up your functions!
+  "maxstatements": 12,
+
+  // Require capitalized names for constructor functions.
+  "newcap": true,
+
+  // Defines node.js globals
+  "node": true,
+
+  // Enforce single quotes on strings
+  "quotmark": "single",
+
+  // Prohibit trailing whitespace.
+  "trailing": true,
+
+  // Prohibit use of explicitly undeclared variables.
+  "undef": true,
+
+  // Warn when variables are defined but never used.
+  "unused": true
+}

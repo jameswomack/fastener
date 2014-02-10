@@ -1,0 +1,4 @@
+{
+  "rivets.js": "rivets/dist/rivets.min.js",
+  "superagent.js": "superagent/superagent.js"
+}
